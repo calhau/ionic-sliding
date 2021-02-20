@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Exemplo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,26 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Slide-item2</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>Exemplo de Item Slide, Bruno!</h2>
+    <ion-list >
+   <ion-item-sliding *ngFor = "let item of items" (ionDrag)="teste($event)" (ionSwipe)="teste2($event)" >
+     <ion-item>
+     {{item.title}}
+     </ion-item>
+     <ion-item-options class="red" side="end" style="direction:ltr;">
+       <button  (click)="removeItem(item)" class="red"><ion-icon name="trash-outline"></ion-icon></button>
+     </ion-item-options>
+     <ion-item-options class="blue" side="start">
+      <button (click)="removeItem(item)" class="blue"><ion-icon name="checkmark-done-outline"></ion-icon></button>
+    </ion-item-options>
+   </ion-item-sliding>
+
+   </ion-list>
+
   </div>
 </ion-content>

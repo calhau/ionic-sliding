@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -24,4 +23,29 @@
 
 #container a {
   text-decoration: none;
+}
+
+
+// ion-item-options {
+//   background-color: #3a78e7;
+
+// }
+
+
+// ion-item-options button {
+//   background-color: #3a78e7;
+// }
+
+.blue {
+  background-color: #3a78e7;
+}
+
+.red {
+  background-color: #d23431;
+}
+
+ion-icon {
+  font-size: 1.7em; //Preferred size here
+  color: white;
+  font-weight: bolder;
 }
